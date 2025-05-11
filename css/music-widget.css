@@ -1,0 +1,73 @@
+/* Music Widget Container */
+.music-widget {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 0.3rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.music-widget:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+/* Play/Pause Button */
+#play-pause-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 18px;
+  outline: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.2));
+}
+
+/* Icon scale-down and fade-out animation */
+@keyframes scaleFadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.scale-fade-out {
+  animation: scaleFadeOut 0.4s ease-in-out forwards;
+}
+
+/* Icon scale-up and fade-in animation */
+@keyframes scaleFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scale-fade-in {
+  animation: scaleFadeIn 0.4s ease-in-out forwards;
+}

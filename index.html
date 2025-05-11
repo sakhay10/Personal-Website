@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Sakha Yassaar Al Maalik — Web Developer & Designer. Temukan karya dan project kreatif dari seorang pelajar SMK dengan semangat inovasi di dunia digital."
+    />
+    <meta name="author" content="Sakha Yasaar" />
+    <meta
+      name="keywords"
+      content="Sakha Yassaar Al Maalik, sakha, yassaar, al, maalik, personal, website, pelajar smk, smk, smk negeri 1 kota jambi, starai"
+    />
+    <meta
+      name="google-site-verification"
+      content="1FIBsUeAB4RAXDbgK2rPR0hUhWyFVyICftETXb9lqQE"
+    />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>Sakha - Personal Website</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts: Montserrat, Poppins, and Emblema One -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Emblema+One&family=Montserrat:wght@700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/music-widget.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <div class="container">
+        <a href="#" class="logo" aria-label="Sakha Home">Sakha</a>
+        <button
+          class="burger"
+          id="burger"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          type="button"
+        >
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-links" role="menubar">
+          <li role="none">
+            <a href="#hero" role="menuitem" tabindex="0">Home</a>
+          </li>
+          <li role="none">
+            <a href="#profile" role="menuitem" tabindex="-1">Profile</a>
+          </li>
+          <li role="none">
+            <a href="#skills" role="menuitem" tabindex="-1">Skill</a>
+          </li>
+          <li role="none">
+            <a href="#about" role="menuitem" tabindex="-1">About</a>
+          </li>
+          <li role="none">
+            <a href="#timeline" role="menuitem" tabindex="-1">Timeline</a>
+          </li>
+          <li role="none">
+            <a href="#projects" role="menuitem" tabindex="-1">Project</a>
+          </li>
+          <li role="none">
+            <a href="#blog" role="menuitem" tabindex="-1">Blog</a>
+          </li>
+          <li role="none">
+            <a href="#feedback" role="menuitem" tabindex="-1">Feeedback</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Music Player Widget -->
+    <section
+      id="music-widget"
+      class="music-widget"
+      aria-label="Music Player Widget"
+    >
+      <div class="container">
+        <audio
+          id="audio-player"
+          src="audio/bg-sound.mp3"
+          preload="auto"
+          loop
+        ></audio>
+        <button
+          id="play-pause-btn"
+          aria-label="Play music"
+          class="play"
+          type="button"
+          aria-pressed="false"
+        >
+          <i class="fa-solid fa-play" aria-hidden="true"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-content">
+        <h1 class="hero-title">Hi, I'm Sakha</h1>
+        <h2 class="hero-subtitle">
+          <span id="typing">Welcome To My Personal Website</span>
+        </h2>
+        <button
+          class="hero-button"
+          id="hero-button"
+          aria-pressed="false"
+          aria-label="Lihat Project Saya"
+        >
+          Lihat Project Saya
+          <i
+            class="fa-solid fa-arrow-down"
+            id="hero-button-icon"
+            aria-hidden="true"
+          ></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="card-section">
+      <div class="container profile-card card">
+        <img src="img/Me.jpg" alt="Foto Sakha" class="profile-photo" />
+        <h3 class="profile-name">Sakha Yassaar Al Maalik</h3>
+        <p class="profile-bio">Web Developer & Designer</p>
+        <p class="profile-motivation">
+          "Abaikan suara-suara yang merendahkan langkahmu. Terus berjalan, sebab
+          suatu hari nanti, kamu akan berdiri di tempat yang hanya bisa mereka
+          lihat dari kejauhan."
+        </p>
+        <div class="social-media">
+          <a
+            href="https://l.instagram.com/?u=https%3A%2F%2Fwww.instagram.com%2Fsakhayassaar10_%3Figsh%3DMW12NHFsajNldjl1dg%253D%253D%26fbclid%3DPAZXh0bgNhZW0CMTEAAac9i5GPUB_bQRetAhHsSzUrXJcMil9oEv0N5o57ggf7EbZEGWij-fQ8TPn5xg_aem_G0DYEKCE3NQmMoHBO16-HA&e=AT3sIgZ9UTZQ7QBBlkV-r2emCnxIU5u0vG-l4EaeCezFaUGoOcQ12U_uXHITxII0bBUD1WsJNCcN2SdVw7VuDdajI-e0BoqRmdhqLkA"
+            target="_blank"
+            aria-label="Instagram"
+            class="social-link"
+          >
+            <i class="fab fa-instagram"></i> @sakhayassaar10_
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="card-section">
+      <div class="container skills-card" role="list" aria-label="Keahlian Saya">
+        <div
+          class="skill-card combined-skill-card"
+          role="listitem"
+          tabindex="0"
+          aria-label="Keahlian HTML5, CSS3, dan JavaScript"
+        >
+          <h2
+            class="section-title"
+            style="margin-bottom: 1.5rem; text-align: center"
+          >
+            My Skill
+          </h2>
+          <div class="skill-item">
+            <i class="fa-brands fa-html5 skill-icon" aria-hidden="true"></i>
+            <div class="skill-name">HTML5</div>
+            <div class="skill-bar">
+              <div class="skill-progress html" style="width: 45%"></div>
+            </div>
+            <div class="skill-percent">45%</div>
+          </div>
+          <div class="separator"></div>
+          <div class="skill-item">
+            <i class="fa-brands fa-css3-alt skill-icon" aria-hidden="true"></i>
+            <div class="skill-name">CSS3</div>
+            <div class="skill-bar">
+              <div class="skill-progress css" style="width: 35%"></div>
+            </div>
+            <div class="skill-percent">35%</div>
+          </div>
+          <div class="separator"></div>
+          <div class="skill-item">
+            <i class="fa-brands fa-js skill-icon" aria-hidden="true"></i>
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-bar">
+              <div class="skill-progress js" style="width: 20%"></div>
+            </div>
+            <div class="skill-percent">20%</div>
+          </div>
+          <div class="separator"></div>
+          <div class="skill-item">
+            <i class="fa-brands fa-python skill-icon" aria-hidden="true"></i>
+            <div class="skill-name">Python</div>
+            <div class="skill-bar">
+              <div class="skill-progress python" style="width: 10%"></div>
+            </div>
+            <div class="skill-percent">10%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="card-section">
+      <div class="container about-card card">
+        <h2 class="section-title">About Me</h2>
+        <p>
+          Halo, Selamat Datang!. Perkenalkan nama saya Sakha Yassaar Al Maalik,
+          biasa di panggil Sakha. Saya sekarang menduduki bangku SMK Kelas 10
+          dan asal sekolah saya SMK Negeri 1 Kota Jambi.
+        </p>
+        <p>
+          Saya memiliki cita-cita yang membutuhkan dedikasi dan kerja keras
+          untuk mencapainya, yaitu menjadi seorang Ahli IT. Ahli IT (Information
+          Technology Specialist) adalah profesional yang memiliki keahlian dalam
+          merancang, mengelola, dan mengamankan sistem teknologi informasi.
+          Mereka berperan penting dalam mendukung operasional perusahaan,
+          organisasi, maupun institusi pendidikan di era digital. Tanggung
+          jawabnya mencakup pengelolaan perangkat keras dan lunak, pengembangan
+          sistem, serta perlindungan data melalui keamanan siber. Di tengah
+          pesatnya kemajuan teknologi, peran ini semakin dibutuhkan di berbagai
+          sektor industri. Menjadi ahli IT tidak hanya memerlukan keterampilan
+          teknis, tetapi juga kemampuan berpikir kritis, komunikasi yang baik,
+          dan adaptasi terhadap inovasi teknologi.
+        </p>
+        <p>
+          Saya adalah seorang Astrophile. Orang yang suka dengan hal-hal seperti
+          bintang, langit malam, dan luar angkasa.
+        </p>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="card-section">
+      <div class="container timeline-card card">
+        <h2 class="section-title">Timeline</h2>
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+          <div class="timeline-cards">
+            <div class="timeline-card-item">
+              <h3>SD</h3>
+              <span class="timeline-year">2015 - 2021</span>
+              <p>
+                Mulai mengenal dunia, belajar dasar - dasar, dan menumbuhkan
+                rasa ingin tahu.
+              </p>
+            </div>
+            <div class="timeline-card-item">
+              <h3>SMP</h3>
+              <span class="timeline-year">2021 - 2024</span>
+              <p>
+                Masa di mana rasa penasaran berubah jadi ketertarikan mendalam
+                pada dunia digital.
+              </p>
+            </div>
+            <div class="timeline-card-item">
+              <h3>SMK</h3>
+              <span class="timeline-year">2024 - Sekarang</span>
+              <p>
+                Di sinilah passion tumbuh kuat. Mulai membangun proyek nyata dan
+                mengasah skill sebagai Web Developer & Designer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="card-section">
+      <div class="container projects-card card">
+        <h2 class="section-title">Project</h2>
+        <div
+          class="projects-list"
+          role="list"
+          aria-label="Daftar Project Saya"
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+          "
+        >
+          <article
+            class="project-item"
+            role="listitem"
+            tabindex="0"
+            aria-label="Project STARAI"
+          >
+            <div class="project-icon" aria-hidden="true" title="STARAI">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="project-content">
+              <h3>❔TanyaAI❔</h3>
+              <p>
+                AI Sederhana yang Dirancang untuk Menjawab Pertanyaan Anda
+                Secara Cerdas dan Efisien.
+              </p>
+              <div class="project-button-wrapper">
+                <a
+                  href="page/coming-soon.html"
+                  class="project-button"
+                  aria-label="View STARAI Project"
+                >
+                  <span>View</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <span class="coming-soon-label" aria-label="Coming Soon"
+                  ><i class="fa-regular fa-clock"></i> Coming Soon</span
+                >
+              </div>
+            </div>
+          </article>
+          <article
+            class="project-item"
+            role="listitem"
+            tabindex="0"
+            aria-label="Project Games"
+          >
+            <div class="project-icon" aria-hidden="true" title="Games">
+              <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <div class="project-content">
+              <h3>Games</h3>
+              <p>
+                Game Sederhana, Satu Layar, Dua Pemain, Ciptakan Momen Seru –
+                Siap Bermain Dengan Temanmu?
+              </p>
+              <div class="project-button-wrapper">
+                <a
+                  href="page/coming-soon.html"
+                  class="project-button"
+                  aria-label="View Games Project"
+                >
+                  <span>View</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <span class="coming-soon-label" aria-label="Coming Soon"
+                  ><i class="fa-regular fa-clock"></i> Coming Soon</span
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="card-section">
+      <div class="container blog-card card">
+        <h2 class="section-title">Blog</h2>
+        <article
+          class="blog-post"
+          style="
+            border-bottom: 2px solid var(--gray-light);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+          "
+        >
+          <img
+            src="img/blog1.jpg"
+            alt="Blog Pertama"
+            class="blog-photo"
+            style="
+              width: 100%;
+              height: auto;
+              border-radius: 12px 12px 0 0;
+              margin-bottom: 0.5rem;
+            "
+          />
+          <h3>Siapa Saya?, Perjalanan dan Alasan Memilih Dunia Teknologi</h3>
+          <p>
+            Perkenalkan, saya Sakha Yassaar Al Maalik, pelajar kelas 10 di SMK
+            Negeri 1 Kota Jambi, jurusan Teknik Jaringan Komputer dan
+            Telekomunikasi. Ketertarikan saya terhadap dunia teknologi dimulai
+            sejak SMP, saat pertama kali penasaran bagaimana sebuah website
+            bekerja. Dari situ, saya mulai belajar HTML dan CSS secara mandiri,
+            yang kemudian berkembang menjadi ketertarikan mendalam di bidang Web
+            Development dan UI/UX Design. Memasuki SMK, saya mulai lebih serius
+            mengembangkan kemampuan teknis melalui berbagai proyek kecil dan
+            dengan mendalami beragam bahasa pemrograman serta konsep desain
+            antarmuka. Saya terus mengeksplorasi dan mengasah keterampilan saya
+            dalam menciptakan produk digital yang tidak hanya berfungsi dengan
+            baik, tetapi juga memiliki nilai estetika. Saya memiliki mimpi
+            besar: melanjutkan pendidikan ke universitas impian. Bagi saya,
+            perguruan tinggi adalah pintu menuju pengalaman dan ilmu yang lebih
+            luas, serta langkah penting dalam perjalanan saya di dunia
+            teknologi. Blog ini menjadi ruang dokumentasi bagi perjalanan
+            saya—sebagai refleksi, catatan proses, dan mungkin inspirasi bagi
+            siapa pun yang juga sedang membangun mimpinya. Nantikan tulisan saya
+            berikutnya yang akan membahas proyek AI sederhana yang sedang saya
+            kembangkan: STARAI.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="card-section">
+      <div class="container feedback-card card">
+        <h2 class="section-title">Feedback</h2>
+        <p>Silahkan kunjungi halaman khusus untuk menyampaikan pesan Anda.</p>
+        <a href="page/pesan.html" class="feedback-link">Halaman Feedback</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" aria-label="Footer">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+          max-width: 600px;
+          text-align: justify;
+          font-size: 0.9rem;
+        "
+      >
+        <p style="margin: 0; opacity: 0.8">&copy; 2025 Sakha Yassaar.</p>
+        <p style="margin: 0; opacity: 0.8">Terima kasih sudah berkunjung.</p>
+        <p class="made-with-love" style="margin: 0; opacity: 0.8">
+          Made with <span class="heart">❤️</span> By Sakha Yassaar
+        </p>
+        <p style="opacity: 0.6">
+          Backsound -
+          <a
+            href="https://open.spotify.com/track/3AJwUDP919kvQ9QcozQPxg?si=5da7994fbb8d4210"
+            style="
+              opacity: 0.6;
+              color: rgba(255, 255, 255, 0.7);
+              text-decoration: none;
+            "
+            >Yellow by Coldplay</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/music-widget.js"></script>
+  </body>
+</html>

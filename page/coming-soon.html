@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coming Soon</title>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        overflow: hidden;
+        color: white;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+        animation: fadeInDown 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        opacity: 0;
+        transform-origin: center bottom;
+      }
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        animation-delay: 0.6s;
+        opacity: 0;
+        transform-origin: center top;
+      }
+      /* Animated dots */
+      .dots {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 3rem;
+      }
+      .dot {
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+        opacity: 0;
+        animation: bounce 2s ease-in-out forwards;
+        animation-iteration-count: infinite;
+      }
+      .dot:nth-child(1) {
+        animation-delay: 1.2s;
+      }
+      .dot:nth-child(2) {
+        animation-delay: 1.5s;
+      }
+      .dot:nth-child(3) {
+        animation-delay: 1.9s;
+      }
+      /* Interactive button */
+      .notify-btn {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        padding: 12px 30px;
+        font-size: 1.2rem;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        opacity: 0;
+        animation: fadeInButton 1.2s ease forwards;
+        animation-delay: 0.6s;
+      }
+      .notify-btn:hover {
+        background: white;
+        color: #2a5298;
+        box-shadow: 0 0 15px white;
+      }
+      .notify-btn:focus {
+        outline: none;
+      }
+      @keyframes fadeInButton {
+        0% {
+          opacity: 0;
+          transform: translateY(20px) scale(0.95);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      /* Background animated circles */
+      .background-circles {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 200vw;
+        height: 200vw;
+        max-width: 2000px;
+        max-height: 2000px;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 0;
+      }
+      .circle {
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+      .circle1 {
+        width: 400px;
+        height: 400px;
+        top: 20%;
+        left: 30%;
+        animation-name: pulse1;
+        animation-duration: 8s;
+      }
+      .circle2 {
+        width: 600px;
+        height: 600px;
+        top: 50%;
+        left: 60%;
+        animation-name: pulse2;
+        animation-duration: 10s;
+      }
+      .circle3 {
+        width: 800px;
+        height: 800px;
+        top: 70%;
+        left: 40%;
+        animation-name: pulse3;
+        animation-duration: 12s;
+      }
+      /* Additional animated shapes */
+      .shape {
+        position: fixed;
+        border-radius: 50%;
+        opacity: 0.2;
+        pointer-events: none;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+      .shape1 {
+        width: 150px;
+        height: 150px;
+        background: rgba(255, 255, 255, 0.1);
+        top: 10%;
+        left: 10%;
+        animation: float1 6s ease-in-out infinite;
+      }
+      .shape2 {
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.15);
+        top: 80%;
+        left: 20%;
+        animation: float2 8s ease-in-out infinite;
+      }
+      .shape3 {
+        width: 120px;
+        height: 120px;
+        background: rgba(255, 255, 255, 0.12);
+        top: 30%;
+        left: 80%;
+        animation: float3 7s ease-in-out infinite;
+      }
+      /* Floating animations */
+      @keyframes float1 {
+        0%,
+        100% {
+          transform: translateY(0);
+          opacity: 0.2;
+        }
+        50% {
+          transform: translateY(-20px);
+          opacity: 0.4;
+        }
+      }
+      @keyframes float2 {
+        0%,
+        100% {
+          transform: translateY(0);
+          opacity: 0.15;
+        }
+        50% {
+          transform: translateY(15px);
+          opacity: 0.3;
+        }
+      }
+      @keyframes float3 {
+        0%,
+        100% {
+          transform: translateY(0);
+          opacity: 0.18;
+        }
+        50% {
+          transform: translateY(-15px);
+          opacity: 0.35;
+        }
+      }
+      /* Animations */
+      @keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-50px) scale(0.95);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(50px) scale(0.95);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        50% {
+          transform: translateY(-20px);
+          opacity: 1;
+        }
+      }
+      @keyframes pulse1 {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.15;
+        }
+        50% {
+          transform: scale(1.1);
+          opacity: 0.3;
+        }
+      }
+      @keyframes pulse2 {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.15;
+        }
+        50% {
+          transform: scale(1.15);
+          opacity: 0.35;
+        }
+      }
+      @keyframes pulse3 {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.15;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.4;
+        }
+      }
+      /* Text flicker animation */
+      @keyframes flicker {
+        0%,
+        19%,
+        21%,
+        23%,
+        25%,
+        54%,
+        56%,
+        100% {
+          opacity: 1;
+        }
+        20%,
+        22%,
+        24%,
+        55% {
+          opacity: 0.4;
+        }
+      }
+      /* Button ripple effect */
+      .notify-btn::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        box-shadow: 0 0 15px white;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .notify-btn:active::after {
+        opacity: 1;
+        transition: opacity 0s;
+        animation: ripple 0.6s ease-out;
+      }
+      @keyframes ripple {
+        0% {
+          transform: scale(0.8);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(2.5);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-circles" aria-hidden="true">
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+      <div class="circle circle3"></div>
+      <div class="shape shape1"></div>
+      <div class="shape shape2"></div>
+      <div class="shape shape3"></div>
+    </div>
+    <h1
+      class="flicker-text"
+      style="
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+      "
+    >
+      Coming Soon
+    </h1>
+    <p
+      style="
+        font-size: 1.25rem;
+        font-weight: 400;
+        max-width: 400px;
+        margin: 0 auto 2rem auto;
+        line-height: 1.5;
+        color: #e0e0e0;
+      "
+    >
+      "My website is currently under development. I'm working hard to bring you
+      something amazing. Stay tuned!"
+    </p>
+    <div class="dots" aria-label="Loading animation">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <button
+      class="notify-btn"
+      aria-label="Notify me when launched"
+      id="back-home-btn"
+    >
+      Back to Home
+    </button>
+
+    <script>
+      // Interactive button animation on click
+      const notifyBtn = document.querySelector(".notify-btn");
+      notifyBtn.addEventListener("click", () => {
+        notifyBtn.textContent = "Thank you!";
+        notifyBtn.disabled = true;
+        notifyBtn.style.cursor = "default";
+        setTimeout(() => {
+          notifyBtn.textContent = "Notify Me";
+          notifyBtn.disabled = false;
+          notifyBtn.style.cursor = "pointer";
+        }, 3000);
+      });
+
+      // Back to home button functionality
+      const backHomeBtn = document.getElementById("back-home-btn");
+      backHomeBtn.addEventListener("click", () => {
+        window.location.href = "../index.html";
+      });
+
+      // Optional: interactive background circles respond to mouse movement
+      const circles = document.querySelectorAll(".circle, .shape");
+      document.body.addEventListener("mousemove", (e) => {
+        const x = e.clientX / window.innerWidth - 0.5;
+        const y = e.clientY / window.innerHeight - 0.5;
+        circles.forEach((circle, i) => {
+          const factor = (i + 1) * 10;
+          circle.style.transform = `translate(${x * factor}px, ${
+            y * factor
+          }px) scale(1)`;
+        });
+      });
+    </script>
+  </body>
+</html>
