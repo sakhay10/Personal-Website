@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Askha AI - Chatbot Cerdas</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="askha-ai.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Selamat datang di Askha AI - Chatbot Cerdas Anda</h1>
+    </header>
+    <main>
+      <section class="chat-container" aria-label="Chat antara pengguna dan AI">
+        <div
+          class="chat-messages"
+          id="chatMessages"
+          role="log"
+          aria-live="polite"
+          aria-relevant="additions"
+        ></div>
+        <form class="chat-input" id="chatForm" aria-label="Formulir input chat">
+          <input
+            type="text"
+            id="userInput"
+            autocomplete="off"
+            placeholder="Ketik pertanyaan Anda di sini..."
+            aria-label="Input pertanyaan"
+            required
+          />
+<button type="submit" aria-label="Kirim pesan" id="sendButton">
+            <svg
+              class="send-icon fa-paper-plane"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path fill="white" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+            </svg>
+            <i class="spinner fa-solid fa-spinner"></i>
+          </button>
+        </form>
+      </section>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer class="footer" aria-label="Footer">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+          max-width: 600px;
+          text-align: justify;
+          font-size: 0.9rem;
+          color: white;
+          opacity: 0.8;
+        "
+      >
+        <p style="margin: 0; opacity: 0.8">&copy; 2025 Sakha Yassaar.</p>
+        <p style="margin: 0; opacity: 0.8">Terima kasih sudah berkunjung.</p>
+        <p class="made-with-love" style="margin: 0; opacity: 0.8">
+          Made with <span class="heart">❤️</span> By Sakha Yassaar
+        </p>
+        <a
+          href="../index.html"
+          style="
+            opacity: 0.6;
+            margin-top: 0.5rem;
+            padding: 0.5rem 0.5rem;
+            background-color: #3a86ff;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: background-color 0.3s ease;
+          "
+          onmouseover="this.style.backgroundColor='#023e8a'"
+          onmouseout="this.style.backgroundColor='#3a86ff'"
+          ><i class="fa-solid fa-home" style="margin-right: 0.5rem"></i>Halaman
+          Utama</a
+        >
+      </div>
+    </footer>
+
+    <script src="askha-ai.js"></script>
+  </body>
+</html>

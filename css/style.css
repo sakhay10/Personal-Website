@@ -1,7 +1,7 @@
 :root {
   --primary-color: #007bff;
   --primary-color-dark: #023e8a;
-  --background-color: #f9f9f9;
+  --background-color: #f6f6f6;
   --text-color: #333333;
   --text-color-light: #666666;
   --shadow-color: rgba(0, 0, 0, 0.1);
@@ -242,6 +242,7 @@ body {
   text-align: center;
   flex-direction: column;
   padding: 0 1rem;
+  margin-bottom: 3rem;
   position: relative;
   overflow: hidden;
   padding-top: 0;
@@ -306,6 +307,7 @@ body {
   overflow: visible;
   border-right: none;
   opacity: 0;
+  transform: translateY(-20px);
   animation: fadeInDown 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   animation-delay: 1s;
   text-align: center;
@@ -354,7 +356,9 @@ body {
 
 /* Card Section */
 .card-section {
-  padding: 4rem 0;
+  padding: 1em 0;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   background: var(--background-color);
 }
 
@@ -505,6 +509,7 @@ body {
 
 .skill-progress {
   height: 100%;
+  width: 0%;
   border-radius: 7px;
   transition: width 0.3s ease;
 }
@@ -533,7 +538,6 @@ body {
   text-align: right;
 }
 
-/* Separator line */
 .separator {
   height: 2px;
   background: linear-gradient(90deg, #f16529, #2965f1, #f0db4f, #28a745);
@@ -541,7 +545,7 @@ body {
   border-radius: 1px;
 }
 
-/* About Me Section */
+/* About Section */
 .about-card p {
   margin-bottom: 1rem;
   font-family: var(--font-primary);
@@ -629,7 +633,7 @@ body {
   color: var(--text-color-light);
 }
 
-/* Projects Section */
+/* Project Section */
 .projects-card {
   display: flex;
   flex-direction: column;
@@ -775,51 +779,14 @@ body {
   }
 }
 
-/* Blog Section */
-.blog-card .blog-post {
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--background-color);
-  padding-bottom: 1rem;
-}
-
-.blog-card .blog-post:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.blog-card:hover {
-  box-shadow: 0 8px 16px var(--shadow-color);
-  transform: translateY(-6px);
-}
-
-.blog-photo {
-  width: 150px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 12px 12px 0 0;
-  margin-bottom: 0.5rem;
-}
-
-.blog-post h3 {
-  font-family: var(--font-secondary);
-  color: var(--primary-color);
-  margin-bottom: 0.3rem;
-}
-
-.blog-post p {
-  font-family: var(--font-primary);
-  color: var(--text-color-light);
-}
-
-/* Feedback Section */
-.feedback-card p {
+/* Page Section */
+.page-card p {
   font-family: var(--font-primary);
   color: var(--text-color-light);
   margin-bottom: 1rem;
 }
 
-.feedback-link {
+.page-link {
   font-family: var(--font-primary);
   color: var(--primary-color);
   text-decoration: none;
@@ -828,11 +795,48 @@ body {
   transition: border-color 0.2s ease;
 }
 
-.feedback-link:hover {
+.page-link:hover {
   border-color: var(--primary-color);
 }
 
-/* Footer */
+/*story Section */
+.story-card story-post {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--background-color);
+  padding-bottom: 1rem;
+}
+
+.story-card story-post:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.story-card:hover {
+  box-shadow: 0 8px 16px var(--shadow-color);
+  transform: translateY(-6px);
+}
+
+.story-photo {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 0.5rem;
+}
+
+.story-post h3 {
+  font-family: var(--font-secondary);
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.story-post p {
+  font-family: var(--font-primary);
+  color: var(--text-color-light);
+}
+
+/* Footer Section */
 .footer {
   background: linear-gradient(
     135deg,

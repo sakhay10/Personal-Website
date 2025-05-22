@@ -6,6 +6,16 @@ window.addEventListener("load", () => {
     preloader.style.display = "none";
   }, 300);
 
+  // Restore scroll position if saved (per page)
+  const scrollKey = "scrollY_" + location.pathname;
+  const savedScrollY = sessionStorage.getItem(scrollKey);
+  if (savedScrollY !== null) {
+    setTimeout(() => {
+      window.scrollTo(0, parseInt(savedScrollY, 10));
+      sessionStorage.removeItem(scrollKey);
+    }, 50);
+  }
+
   // Show hero button with smooth animation
   const heroButton = document.getElementById("hero-button");
   heroButton.classList.add("show");
@@ -20,9 +30,12 @@ window.addEventListener("load", () => {
       });
     }
   });
+});
 
-  // Animate skill bars
-  animateSkillBars();
+// Save scroll position before unloading the page (per page)
+window.addEventListener("beforeunload", () => {
+  const scrollKey = "scrollY_" + location.pathname;
+  sessionStorage.setItem(scrollKey, window.scrollY.toString());
 });
 
 // Burger menu toggle
@@ -132,14 +145,60 @@ setTimeout(() => {
   type();
 }, 3700);
 
+// Animation skill progress bar
 function animateSkillBars() {
   const htmlBar = document.querySelector(".skill-progress.html");
   const cssBar = document.querySelector(".skill-progress.css");
   const jsBar = document.querySelector(".skill-progress.js");
+  const pythonBar = document.querySelector(".skill-progress.python");
 
+  if (!htmlBar || !cssBar || !jsBar || !pythonBar) {
+    return; // Exit if any bar is missing
+  }
+
+  // Reset widths to 0 and force reflow to restart animation
+  htmlBar.style.transition = "none";
+  cssBar.style.transition = "none";
+  jsBar.style.transition = "none";
+  pythonBar.style.transition = "none";
+
+  htmlBar.style.width = "0";
+  cssBar.style.width = "0";
+  jsBar.style.width = "0";
+  pythonBar.style.width = "0";
+
+  // Force reflow to apply the width 0 immediately
+  void htmlBar.offsetWidth;
+
+  // Add CSS transition for smooth animation
+  htmlBar.style.transition = "width 1.5s ease-in-out";
+  cssBar.style.transition = "width 1.5s ease-in-out";
+  jsBar.style.transition = "width 1.5s ease-in-out";
+  pythonBar.style.transition = "width 1.5s ease-in-out";
+
+  // Trigger animation to target widths
   setTimeout(() => {
     htmlBar.style.width = "45%";
     cssBar.style.width = "35%";
     jsBar.style.width = "20%";
-  }, 500);
+    pythonBar.style.width = "10%";
+  }, 50);
+}
+
+const skillCard = document.querySelector(".skill-card.combined-skill-card"); // Correct container class for skill bars
+
+if (skillCard) {
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateSkillBars();
+          observer.unobserve(skillCard); // Animate only once
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(skillCard);
 }

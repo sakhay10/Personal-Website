@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <title>Story</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts: Montserrat, and Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      body,
+      main {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Hero section */
+      .hero-section {
+        background: linear-gradient(135deg, #3a86ff, #023e8a);
+        color: white;
+        padding: 4rem 2rem;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        text-align: center;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        position: relative;
+        max-width: 700px;
+      }
+      @media (min-width: 769px) {
+      }
+      .hero-section h1 {
+        font-size: 3.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        animation-delay: 0.5s;
+        line-height: 1.3;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero-section p {
+        font-size: 1.3rem;
+        font-weight: 600;
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeInDown 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        animation-delay: 1s;
+        line-height: 1.3;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        margin: 0 auto;
+        max-width: 500px;
+      }
+
+      @keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero-section {
+          max-width: 100vw;
+          height: 100dvh;
+          padding: 4rem 2rem;
+          margin-top: 0;
+          border-bottom-left-radius: 16px;
+          border-bottom-right-radius: 16px;
+        }
+
+        .hero-section h1 {
+          font-size: 2.5rem;
+        }
+      }
+
+      /* Footer Section */
+      .footer {
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.2);
+      }
+      .footer-content span {
+        font-size: 0.2rem;
+        vertical-align: middle;
+        color: rgba(255, 255, 255, 0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section" aria-label="Hero section">
+        <h1><i class="fas fa-feather-alt"></i> My Story</h1>
+        <p>
+          "Cerita-cerita <i class="fas fa-book-open"></i> Perjalanan saya dalam
+          dunia teknologi."
+        </p>
+      </section>
+
+      <!-- Story Section -->
+      <section id="story" class="card-section">
+        <div class="container story-card card">
+          <article
+            class="story-post"
+            style="
+              border-bottom: 2px solid var(--gray-light);
+              padding-bottom: 1rem;
+              margin-bottom: 1rem;
+            "
+          >
+            <img
+              src="../img/story1.jpg"
+              alt="Story Pertama"
+              class="story-photo"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 12px 12px 0 0;
+                margin-bottom: 0.5rem;
+              "
+            />
+            <h3>
+              Menemukan Jati Diri di Dunia Digital: Perjalanan Saya Menjadi
+              Pembelajar Teknologi Sejak Dini
+            </h3>
+            <p>
+              Perjalanan saya di dunia teknologi bukanlah hasil dari kebetulan,
+              melainkan dari rasa ingin tahu yang sederhana bagaimana sebuah
+              website bisa bekerja. Saya adalah Sakha Yassaar Al Maalik, seorang
+              pelajar SMK dengan semangat besar untuk memahami dan membangun
+              teknologi dari dasar. Ketertarikan saya terhadap dunia teknologi
+              mulai tumbuh sejak SMP, saat pertama kali penasaran bagaimana
+              sistem digital bekerja di balik layar. Ketertarikan itu terus
+              berkembang hingga saya mulai belajar HTML, CSS, JavaScript, dan
+              berbagai konsep Web Development serta UI/UX Design secara mandiri.
+              Melalui cerita ini, saya ingin berbagi pengalaman, proses belajar,
+              tantangan, dan mimpi saya untuk berkontribusi di dunia digital
+              masa depan. Semoga perjalanan ini bisa menginspirasi siapa pun
+              yang sedang berjalan di jalur yang sama.
+            </p>
+          </article>
+        </div>
+
+        <div class="container story-card card">
+          <article
+            class="story-post"
+            style="
+              border-bottom: 2px solid var(--gray-light);
+              padding-bottom: 1rem;
+              margin-bottom: 1rem;
+            "
+          >
+            <img
+              src="../img/story2.jpg"
+              alt="Story Kedua"
+              class="story-photo"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 12px 12px 0 0;
+                margin-bottom: 0.5rem;
+              "
+            />
+            <h3>
+              Menatap Jauh ke Depan: Impian Saya Menginjakkan Kaki di Fakultas
+              Teknik Informatika ITB atau ITS
+            </h3>
+            <p>
+              Sejak saya mulai menyentuh dunia teknologi, saya sudah memimpikan
+              untuk bisa belajar di tempat terbaik, lingkungan akademik yang
+              menantang, membentuk karakter, dan mendorong saya untuk tumbuh
+              sebagai inovator. ITB dan ITS, dua kampus teknik terbaik di
+              Indonesia, telah lama menjadi tujuan besar dalam perjalanan
+              pendidikan saya. Saya membayangkan diri saya menjadi bagian dari
+              Fakultas Teknik Informatika, mendalami AI, rekayasa perangkat
+              lunak, hingga keamanan siber di bawah bimbingan para dosen
+              terbaik. Bagi saya, masuk ke salah satu kampus ini bukan hanya
+              tentang mengejar prestise, tetapi tentang bertumbuh bersama
+              orang-orang hebat yang memiliki visi membangun masa depan bangsa
+              melalui teknologi. Jalan menuju sana tentu tidak mudah, tapi
+              dengan kerja keras, dedikasi, dan niat belajar yang terus menyala,
+              saya percaya mimpi ini bisa menjadi kenyataan. Cerita ini adalah
+              bentuk komitmen dan semangat saya untuk terus melangkah maju.
+            </p>
+          </article>
+        </div>
+
+        <div class="container story-card card">
+          <article
+            class="story-post"
+            style="
+              border-bottom: 2px solid var(--gray-light);
+              padding-bottom: 1rem;
+              margin-bottom: 1rem;
+            "
+          >
+            <img
+              src="../img/story3.jpg"
+              alt="Story Ketiga"
+              class="story-photo"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 12px 12px 0 0;
+                margin-bottom: 0.5rem;
+              "
+            />
+            <h3>
+              Askha AI: Langkah Awal Saya Menciptakan Asisten Pintar Berbasis AI
+            </h3>
+            <p>
+              Dalam perjalanan saya mengeksplorasi dunia teknologi, saya
+              tertantang untuk menciptakan sesuatu yang benar-benar bermanfaat
+              dan dekat dengan kehidupan sehari-hari. Dari situlah lahir ide
+              "Askha AI". sebuah asisten digital berbasis kecerdasan buatan yang
+              saya rancang untuk membantu pengguna mendapatkan informasi secara
+              cepat dan interaktif. Proyek ini tidak hanya mengasah keterampilan
+              teknis saya di bidang pemrograman dan machine learning, tetapi
+              juga menjadi wadah belajar tentang bagaimana menciptakan solusi
+              teknologi yang berdampak dan human-centered. Berikut adalah kisah
+              dan proses di balik pengembangan Askha AI versi pertama.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="footer" aria-label="Footer">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+          max-width: 600px;
+          text-align: justify;
+          font-size: 0.9rem;
+          color: white;
+          opacity: 0.8;
+        "
+      >
+        <p style="margin: 0; opacity: 0.8">&copy; 2025 Sakha Yassaar.</p>
+        <p style="margin: 0; opacity: 0.8">Terima kasih sudah berkunjung.</p>
+        <p class="made-with-love" style="margin: 0; opacity: 0.8">
+          Made with <span class="heart">❤️</span> By Sakha Yassaar
+        </p>
+        <a
+          href="../index.html"
+          style="
+            opacity: 0.6;
+            margin-top: 0.5rem;
+            padding: 0.5rem 0.5rem;
+            background-color: #3a86ff;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transform: background-color 0.3s ease;
+          "
+          onmouseover="this.style.backgroundColor='#023e8a'"
+          onmouseout="this.style.backgroundColor='#3a86ff'"
+          ><i class="fa-solid fa-home" style="margin-right: 0.5rem"></i>Halaman
+          Utama</a
+        >
+      </div>
+    </footer>
+
+    <script>
+      // Preloader
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 300);
+
+        // Restore scroll position if saved (per page)
+        const scrollKey = "scrollY_" + location.pathname;
+        const savedScrollY = sessionStorage.getItem(scrollKey);
+        if (savedScrollY !== null) {
+          setTimeout(() => {
+            window.scrollTo(0, parseInt(savedScrollY, 10));
+            sessionStorage.removeItem(scrollKey);
+          }, 50);
+        }
+      });
+
+      // Save scroll position before unloading the page (per page)
+      window.addEventListener("beforeunload", () => {
+        const scrollKey = "scrollY_" + location.pathname;
+        sessionStorage.setItem(scrollKey, window.scrollY.toString());
+      });
+
+      // Animation story card using IntersectionObserver and CSS classes
+      const storyCards = document.querySelectorAll(".story-card");
+
+      if (storyCards.length > 0) {
+        // Add initial hidden state to all story cards
+        storyCards.forEach((card) => {
+          card.classList.add("hidden-story-card");
+        });
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Animate cards sequentially with delay
+                const visibleCards = Array.from(storyCards).filter((c) =>
+                  c.classList.contains("visible-story-card")
+                );
+                const index = Array.from(storyCards).indexOf(entry.target);
+                if (!entry.target.classList.contains("visible-story-card")) {
+                  setTimeout(() => {
+                    entry.target.classList.add("visible-story-card");
+                    entry.target.classList.remove("hidden-story-card");
+                  }, index * 400); // 400ms delay between cards
+                }
+              }
+              // No else block to keep animation active once visible
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        storyCards.forEach((card) => {
+          observer.observe(card);
+        });
+      }
+    </script>
+
+    <style>
+      /* Animation styles for story card */
+      .hidden-story-card {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        /* pointer-events removed to avoid interference */
+      }
+      .visible-story-card {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        /* pointer-events removed to avoid interference */
+      }
+    </style>
+  </body>
+</html>

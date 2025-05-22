@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const audioPlayer = document.getElementById("audio-player");
   const playPauseBtn = document.getElementById("play-pause-btn");
   const icon = playPauseBtn.querySelector("i");
-  const playIconClass = "fa-play";
-  const pauseIconClass = "fa-pause";
+  const playIconClass = "fa-volume-xmark";
+  const pauseIconClass = "fa-music";
+
+  // Ensure icon always has 'fas' class for Font Awesome solid style
+  icon.classList.add("fas");
 
   // Function to update aria attributes and button classes
   function updateButtonAttributes(isPlaying) {
@@ -57,6 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
           icon.classList.add(playIconClass);
           updateButtonAttributes(false);
         }
+
+        // Ensure 'fas' class is always present after toggling icons
+        icon.classList.add("fas");
 
         // Use requestAnimationFrame for smoother fade-in start with new animation classes
         requestAnimationFrame(() => {
